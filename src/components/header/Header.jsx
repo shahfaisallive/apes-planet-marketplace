@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import menus from "../../pages/menu";
 import DarkMode from './DarkMode';
+import ConnectWallet from './ConnectWallet.tsx'
 // import logoheader from '../../assets/images/logo/logo.png'
 // import logoheader2x from '../../assets/images/logo/logo@2x.png'
 import logodark from '../../assets/images/logo/logo_dark.png'
@@ -46,9 +47,7 @@ const Header = () => {
         setActiveIndex(index);
     };
 
-    const connectPhantomWallet = () => {
-        console.log("asdasdasd");
-    }
+   
 
     return (
         <header id="header_main" className="header_1 js-header" ref={headerRef}>
@@ -107,10 +106,8 @@ const Header = () => {
                                             </form>
                                         </div>
                                     </div>
-                                    <div className="sc-btn-top mg-r-12" id="site-header" >
-                                        <button onClick={connectPhantomWallet} className="sc-button header-slider style style-1 wallet fl-button pri-1"><span>Wallet connect
-                                        </span></button>
-                                    </div>
+                    
+                                    <ConnectWallet />
 
                                     <div className="admin_active" id="header_admin">
                                         <div className="header_avatar">
